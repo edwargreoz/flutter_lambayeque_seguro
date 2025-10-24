@@ -1,39 +1,38 @@
-// lib/src/utils/constants.dart
-
 import 'package:flutter/material.dart';
 
-// Colores
-const Color kPrimaryColor = Color(0xFF0D47A1); // Azul Oscuro para fondo y botones
-const Color kAccentColor = Color(0xFF42A5F5);  // Azul más claro para el escudo/logo
-const Color kBackgroundColor = Color(0xFFF0F4F8); // Fondo claro de las tarjetas
-const Color kTextColor = Color(0xFF212121); // Texto general
-const Color kTestCredentialsColor = Color(0xFF757575); // Texto de credenciales de prueba
+// --- Colores ---
+const kPrimaryColor = Color(0xFF1E3A8A); // Azul oscuro (Tailwind blue-900)
+const kAccentColor = Color(0xFF3B82F6); // Azul más brillante (Tailwind blue-500)
+const kTextColor = Color(0xFF374151); // Gris oscuro para texto (Tailwind gray-700)
+const kBackgroundColor = Color(0xFFF3F4F6); // Gris muy claro (Tailwind gray-100)
+const kTestCredentialsColor = Color(0xFF6B7280); // Gris medio (Tailwind gray-500)
 
-// Estilos de Texto
-const TextStyle kLogoTextStyle = TextStyle(
+// --- Estilos de Texto ---
+const kLogoTextStyle = TextStyle(
   color: Colors.white,
-  fontSize: 24,
+  fontSize: 20,
   fontWeight: FontWeight.bold,
+  height: 1, 
 );
 
-const TextStyle kWelcomeTitleStyle = TextStyle(
+const kWelcomeTitleStyle = TextStyle(
+  fontSize: 28,
+  fontWeight: FontWeight.bold,
   color: kTextColor,
-  fontSize: 24,
+);
+
+const kButtonTextStyle = TextStyle(
+  fontSize: 18,
   fontWeight: FontWeight.bold,
 );
 
-const TextStyle kButtonTextStyle = TextStyle(
-  color: Colors.white,
-  fontSize: 16,
-  fontWeight: FontWeight.w600,
-);
-
-// Estilos de Botón
-final ButtonStyle kPrimaryButtonStyle = ElevatedButton.styleFrom(
+// --- Estilos de Botón ---
+final kPrimaryButtonStyle = ElevatedButton.styleFrom(
   backgroundColor: kPrimaryColor,
+  foregroundColor: Colors.white,
   padding: const EdgeInsets.symmetric(vertical: 16),
   shape: RoundedRectangleBorder(
-    borderRadius: BorderRadius.circular(8),
+    borderRadius: BorderRadius.circular(10),
   ),
-  elevation: 0,
+  elevation: 5,
 );

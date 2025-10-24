@@ -1,10 +1,7 @@
-// lib/src/widgets/auth_tabs.dart
-
 import 'package:flutter/material.dart';
-// Importamos las constantes para los colores
 import 'package:flutter_lambayeque_seguro/src/utils/constants.dart'; 
 
-// Widget auxiliar para el botón de las pestañas de autenticación (Iniciar Sesión / Registrarse)
+// Widget para las pestañas "Iniciar Sesión" / "Registrarse"
 class AuthTabButton extends StatelessWidget {
   final String label;
   final bool isSelected;
@@ -40,7 +37,8 @@ class AuthTabButton extends StatelessWidget {
             width: 1,
           ),
         ),
-        elevation: isSelected ? 4 : 0,
+        // Elevación solo si está seleccionado para dar el efecto de botón principal
+        elevation: isSelected ? 4 : 0, 
       ),
       child: Text(
         label,
@@ -53,7 +51,7 @@ class AuthTabButton extends StatelessWidget {
   }
 }
 
-// Widget auxiliar para el selector de rol (Ciudadano / Municipal)
+// Widget para el selector de rol "Ciudadano" / "Municipal"
 class RoleTabButton extends StatelessWidget {
   final String label;
   final bool isSelected;
@@ -68,13 +66,16 @@ class RoleTabButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Usamos InkWell para que sea un área clicable con efectos visuales
     return InkWell(
       onTap: onPressed,
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 12),
         decoration: BoxDecoration(
+          // Color de fondo blanco si está seleccionado
           color: isSelected ? Colors.white : Colors.transparent,
           borderRadius: BorderRadius.circular(8),
+          // Borde si está seleccionado
           border: isSelected
               ? Border.all(color: kPrimaryColor, width: 1)
               : null,
